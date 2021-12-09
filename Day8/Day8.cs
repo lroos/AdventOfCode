@@ -1,7 +1,4 @@
-﻿/// <summary>
-/// 
-/// </summary>
-public class Day8
+﻿public class Day8
 {
     public (int, int) Run(string[] input)
     {

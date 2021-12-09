@@ -1,7 +1,4 @@
-﻿/// <summary>
-/// 
-/// </summary>
-public class Day9
+﻿public class Day9
 {
     record point(int x, int y);
 

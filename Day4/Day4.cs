@@ -1,8 +1,4 @@
-﻿using System.Diagnostics;
-/// <summary>
-/// Overly verbose
-/// </summary>
-public class Day4
+﻿public class Day4
 {       
     public (int, int) Run(string[] input)
     {

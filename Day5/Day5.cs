@@ -1,7 +1,4 @@
-﻿/// <summary>
-/// Zip Ranges
-/// </summary>
-public class Day5
+﻿public class Day5
 {    
     public (int, int) Run(string[] input)
     {
