@@ -74,8 +74,6 @@
 
         public static BingoBoard Create(IEnumerable<string> rows)
         {
-            Debug.Assert(rows.Count() == 5);
-
             var state = rows
                 .Select(n => n.Split(" ", StringSplitOptions.RemoveEmptyEntries)
                     .Select(s => Convert.ToInt32(s))
