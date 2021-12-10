@@ -4,7 +4,6 @@
     
     public (int, long) Run(string[] input)
     {
-        var lines = input.Select(line => line.ToArray()).ToArray();
         var pairs = new Dictionary<char, char>() { { '(', ')' }, { '[', ']' }, { '{', '}' }, { '<', '>' } };
         var errorCodes = new Dictionary<char, int>() { { ')', 3 }, { ']', 57 }, { '}', 1197 }, { '>', 25137 } };
         var brackets = ")]}>";
