@@ -1,5 +1,5 @@
-﻿var challenge = new Day10();
-var day = 10;
+﻿var challenge = new Day11();
+var day = 11;
 var input = File.ReadAllLines($"Day{day}\\input.txt");
 var test = File.ReadAllLines($"Day{day}\\test.txt");
 Console.WriteLine($"Test output: {challenge.Run(test)}");
