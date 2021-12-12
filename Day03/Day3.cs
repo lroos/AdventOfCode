@@ -1,6 +1,6 @@
-﻿public class Day3
+﻿public class Day3 : ISolution
 {       
-    public (int, int) Run(string[] input)
+    public (long, long) Run(string[] input)
     {
         var numbers = input.Select(i => Convert.ToInt32(i, 2));
         var range = Enumerable.Range(0, 12);

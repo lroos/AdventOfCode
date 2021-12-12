@@ -1,4 +1,4 @@
-﻿public class Day11
+﻿public class Day11 : ISolution
 {
     sealed record dumbo(int x, int y)
     {
@@ -6,7 +6,7 @@
         public bool Equals(dumbo? other) => x == other!.x && y == other.y;
     };
 
-    public (int, long) Run(string[] input)
+    public (long, long) Run(string[] input)
     {
         var octos = input.SelectMany((line, y) => line.Select((d, x) => new dumbo(x, y) { energy = d - '0' }))
             .ToList();

@@ -1,6 +1,6 @@
-﻿public class Day4
+﻿public class Day4 : ISolution
 {       
-    public (int, int) Run(string[] input)
+    public (long, long) Run(string[] input)
     {
         var draws = input[0]
             .Split(",")

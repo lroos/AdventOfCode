@@ -1,11 +1,11 @@
-﻿public class Day1
+﻿public class Day1 : ISolution
 {
-    public int Run(string[] input)
+    (long, long) ISolution.Run(string[] input)
     {
         var data = input.Select(line => Convert.ToInt32(line)).ToList();
-        return Part1(data);
-        return Part2(data);
+        return (Part1(data), Part2(data));
     }
+
     int Part1(IEnumerable<int> data)
     {
         var previous = (int?)null;

@@ -1,6 +1,6 @@
-﻿public class Day7
+﻿public class Day7 : ISolution
 {
-    public (int, int) Run(string[] input)
+    public (long, long) Run(string[] input)
     {
         var positions = input.First().Split(",").Select(x => int.Parse(x));
         int min = positions.Min(), max = positions.Max();

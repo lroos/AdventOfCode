@@ -1,6 +1,6 @@
-﻿public class Day8
+﻿public class Day8 : ISolution
 {
-    public (int, int) Run(string[] input)
+    public (long, long) Run(string[] input)
     {
         string[] parse(string part, int pos) => part.Split(" | ")
             .ElementAt(pos)

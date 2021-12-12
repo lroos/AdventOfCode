@@ -1,8 +1,8 @@
-﻿public class Day9
+﻿public class Day9 : ISolution
 {
     record point(int x, int y);
 
-    public (int, int) Run(string[] input)
+    public (long, long) Run(string[] input)
     {
         var grid = input.Select(line => line.ToArray().Select(d => int.Parse(d.ToString())).ToArray())
             .ToArray();

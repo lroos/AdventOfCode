@@ -1,8 +1,8 @@
-﻿public class Day10
+﻿public class Day10 : ISolution
 {
     record score(int error, long autocomplete);
     
-    public (int, long) Run(string[] input)
+    public (long, long) Run(string[] input)
     {
         var pairs = new Dictionary<char, char>() { { '(', ')' }, { '[', ']' }, { '{', '}' }, { '<', '>' } };
         var errorCodes = new Dictionary<char, int>() { { ')', 3 }, { ']', 57 }, { '}', 1197 }, { '>', 25137 } };

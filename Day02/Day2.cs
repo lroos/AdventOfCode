@@ -1,6 +1,6 @@
-﻿public class Day2
+﻿public class Day2 : ISolution
 {
-    public int Run(string[] input)
+    public (long, long) Run(string[] input)
     {
         var sub = new Submarine();
         foreach (var item in input)
@@ -11,7 +11,7 @@
             sub.Go(command, amount);
         }
 
-        return sub.Depth * sub.Distance;
+        return (0, sub.Depth * sub.Distance);
     }
 
     public class Submarine

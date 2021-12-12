@@ -1,6 +1,6 @@
-﻿public class Day5
+﻿public class Day5 : ISolution
 {    
-    public (int, int) Run(string[] input)
+    public (long, long) Run(string[] input)
     {
         var vents = input
             .Select(x => line.FromString(x))

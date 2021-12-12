@@ -1,6 +1,6 @@
-﻿public class Day12
+﻿public class Day12 : ISolution
 {   
-    public (int, int) Run(string[] input)
+    public (long, long) Run(string[] input)
     {
         var edges = input.Select(s => s.Split('-'));
         var graph = edges.Union(edges.Select(e => e.Reverse().ToArray()))

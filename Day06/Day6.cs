@@ -1,4 +1,4 @@
-﻿public class Day6
+﻿public class Day6 : ISolution
 {
     public (long, long) Run(string[] input)
     {
