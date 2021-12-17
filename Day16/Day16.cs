@@ -22,7 +22,7 @@
             7 => subpackets[0].eval() == subpackets[1].eval() ? 1 : 0,
             _ => throw new NotImplementedException()
         };
-}
+    }
 
     public (long, long) Run(string[] input)
     {
