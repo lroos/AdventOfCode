@@ -1,9 +1,9 @@
 ﻿public class Day16 : ISolution
 {    
     record header(int version, int type);
-    record packet(header head)
+    abstract record packet(header head)
     {
-        public virtual long eval() => 0;
+        public abstract long eval();
     }
     record literal(header head, long value) : packet(head)
     {
