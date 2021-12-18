@@ -18,13 +18,15 @@ public class Day13 : ISolution
 
         var dots = input.TakeWhile(line => !string.IsNullOrEmpty(line))
             .Select(line => line.Split(",").Select(x => int.Parse(x)).ToArray())
-            .Select(xy => (translate(xy[0], width), translate(xy[1], height)));            
+            .Select(xy => (translate(xy[0], width), translate(xy[1], height)));
 
+        var offset = Console.GetCursorPosition();
         foreach (var dot in dots)
         {
-            Console.SetCursorPosition(dot.Item1, dot.Item2);
+            Console.SetCursorPosition(dot.Item1, dot.Item2 + offset.Top);
             Console.Write('#');
         }
+        Console.SetCursorPosition(0, offset.Top + 6);
 
         return (0, 0);
     }

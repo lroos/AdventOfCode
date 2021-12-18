@@ -23,31 +23,27 @@ public class Day15 : ISolution
                                                       where n.x >= 0 && n.x < w && n.y >= 0 && n.y < h
                                                       select n;
 
-            var paths = new[] { new LinkedList<(point point, int risk)>(new[] { (new point(0, 0), 0) }) };
-            var finished = new List<LinkedList<(point point, int risk)>>();
+            var paths = new[] { (point: new point(0, 0), risk: 0) };
             var min = new Dictionary<point, int>();
 
             do
             {
                 var next = from p in paths
-                           let last = p.Last!.Value
-                           from n in neighbours(last.point)
-                           let risk = last.risk + grid[n.y][n.x]
-                           where !min.TryGetValue(n, out var m) || risk < m
-                           select new LinkedList<(point point, int risk)>(p.Append((n, risk)));
+                           from point in neighbours(p.point)
+                           let risk = p.risk + grid[point.y][point.x]
+                           where !min.TryGetValue(point, out var m) || risk < m
+                           select (point, risk);
 
-                paths = next.GroupBy(n => n.Last!.Value.point)
-                    .Select(g => g.OrderBy(n => n.Last!.Value.risk).First())
+                paths = next.GroupBy(n => n.point)
+                    .Select(g => g.OrderBy(n => n.risk).First())
                     .ToArray();
 
-                foreach (var end in paths.Select(p => p.Last.Value))
+                foreach (var end in paths)
                     min[end.point] = end.risk;
-
-                finished.AddRange(paths.Where(p => p.Last.Value.point == new point(w - 1, h - 1)));
 
             } while (paths.Length > 0);
 
-            return finished.OrderBy(f => f.Last.Value.risk).First().Last.Value.risk;
+            return min[new point(w - 1, h - 1)];
         }
 
         return (x(1), x(5));
