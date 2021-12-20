@@ -25,7 +25,7 @@ void Debug(Type type)
 var days = System.Reflection.Assembly.GetExecutingAssembly()
     .GetTypes().Where(type => type.IsClass && type.GetInterfaces().Contains(typeof(ISolution)));
 
-Debug(typeof(Day18));
+Debug(typeof(Day19));
 
 //foreach (var type in days)
 //{    
