@@ -10,6 +10,8 @@
   <ItemGroup>
     <None Remove=".gitattributes" />
     <None Remove=".gitignore" />
+    <None Remove="Day24\input.txt" />
+    <None Remove="Day24\test.txt" />
     <None Remove="Day23\input.txt" />
     <None Remove="Day23\test.txt" />
     <None Remove="Day22\input.txt" />
@@ -47,6 +49,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Day24\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Day24\test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Day23\input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
