@@ -8,7 +8,7 @@ This repo contains my Advent Of Code 2021 solutions in C# using .NET 6.0.
 ## Metrics
 
 Day | Title | Duration | Lines
-----| ---------|----|---
+---| --- |--: | --:
 1 | Sonar Sweep | 15ms | 32 
 2 | Dive! | 7ms | 49 
 3 | Binary Diagnostic | 176ms | 22 
