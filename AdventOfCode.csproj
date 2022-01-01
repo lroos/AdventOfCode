@@ -182,4 +182,14 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="2015\" />
+    <Folder Include="2016\" />
+    <Folder Include="2017\" />
+    <Folder Include="2018\" />
+    <Folder Include="2019\" />
+    <Folder Include="2020\" />
+    <Folder Include="2021\" />
+  </ItemGroup>
+
 </Project>
