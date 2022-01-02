@@ -10,7 +10,7 @@ void Run(int day, ISolution solution)
     var input = File.ReadAllLines($"Day{day:D2}\\input.txt");
     s.Start();
     Console.Write($"{solution.GetType().Name,-6} Output: {solution.Run(input),-23} solved in {s.ElapsedMilliseconds,4}ms");
-    var source = File.ReadAllLines($"..\\..\\..\\Day{day:D2}\\Day{day}.cs");
+    var source = File.ReadAllLines($"..\\..\\..\\Day{day:D2}\\Day{day:D2}.cs");
     Console.WriteLine($" with {source.Count(l => !string.IsNullOrWhiteSpace(l)),-3} lines of code.");
 }
 

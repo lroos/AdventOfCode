@@ -6,7 +6,7 @@
         return (Part1(data), Part2(data));
     }
 
-    int Part1(IEnumerable<int> data)
+    private int Part1(IEnumerable<int> data)
     {
         var previous = (int?)null;
         var count = 0;
@@ -20,7 +20,7 @@
         return count;
     }
 
-    int Part2(IList<int> data)
+    private int Part2(IList<int> data)
     {
         var previous = (int?)null;
         var count = 0;
@@ -38,5 +38,3 @@
         return count;
     }
 }
-
-
