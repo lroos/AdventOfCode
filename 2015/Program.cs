@@ -34,4 +34,4 @@ void GetMetrics()
     }
 }
 
-Debug(typeof(Day01));
+Debug(typeof(Day02));

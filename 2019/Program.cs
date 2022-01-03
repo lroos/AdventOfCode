@@ -22,7 +22,7 @@ void Debug(Type type)
     Run(day, solution);
 }
 
-Debug(typeof(Day01));
+Debug(typeof(Day02));
 
 //var days = System.Reflection.Assembly.GetExecutingAssembly()
 //    .GetTypes().Where(type => type.IsClass && type.GetInterfaces().Contains(typeof(ISolution)));
